@@ -12,4 +12,6 @@ module com.example.pizzeriamanagementsystem {
 
     opens com.example.pizzeriamanagementsystem to javafx.fxml;
     exports com.example.pizzeriamanagementsystem;
+    exports com.example.pizzeriamanagementsystem.form;
+    opens com.example.pizzeriamanagementsystem.form to javafx.fxml;
 }
