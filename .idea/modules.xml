@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PizzeriaManagementSystem.iml" filepath="$PROJECT_DIR$/PizzeriaManagementSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/OrderingSystem.iml" filepath="$PROJECT_DIR$/OrderingSystem.iml" />
     </modules>
   </component>
 </project>

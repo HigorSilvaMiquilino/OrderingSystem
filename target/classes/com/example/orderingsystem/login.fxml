@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="com.example.orderingsystem.form.LoginController"
+          alignment="CENTER" hgap="10" vgap="10"
+          fx:id="gridPaneLogin">
+
+
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10"/>
+    </padding>
+
+    <Label text="Email:" fx:id="emailLabel" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="emailTextField" promptText="user@gmail.com"
+               minWidth="300" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+    <Label text="Password:" fx:id="passwordLabel" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="passwordTextField" promptText="********"
+               minWidth="300" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+    <Label text="" fx:id="messageLabel" GridPane.columnIndex="1"
+           GridPane.rowIndex="2" GridPane.halignment="CENTER"/>
+
+    <Button text="Login" minWidth="400" fx:id="buttonLogin" onAction="#loginButtonPressed" GridPane.columnIndex="1"
+            GridPane.rowIndex="3" GridPane.halignment="CENTER"/>
+
+    <Button text="Sing Up" minWidth="400" fx:id="buttonSingUp"  onAction="#singUpButtonPressed" GridPane.columnIndex="1"
+            GridPane.rowIndex="4" GridPane.halignment="CENTER"/>
+
+    <Label text="Doesn't have an account? Sing Up"  GridPane.columnIndex="1" GridPane.rowIndex="5"
+            GridPane.halignment="CENTER"/>
+
+</GridPane>
+
+

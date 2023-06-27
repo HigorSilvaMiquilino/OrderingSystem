@@ -1,7 +1,10 @@
-module com.example.pizzeriamanagementsystem {
+module com.example.orderingsystem {
     requires javafx.controls;
     requires javafx.fxml;
     requires javafx.web;
+    requires java.base;
+
+
 
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
@@ -9,9 +12,14 @@ module com.example.pizzeriamanagementsystem {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires java.sql;
+    requires java.sql.rowset;
+    requires java.transaction.xa;
 
-    opens com.example.pizzeriamanagementsystem to javafx.fxml;
-    exports com.example.pizzeriamanagementsystem;
-    exports com.example.pizzeriamanagementsystem.form;
-    opens com.example.pizzeriamanagementsystem.form to javafx.fxml;
+    opens com.example.orderingsystem to javafx.fxml;
+    exports com.example.orderingsystem;
+    exports com.example.orderingsystem.form;
+    opens com.example.orderingsystem.form to javafx.fxml;
+
+
 }
