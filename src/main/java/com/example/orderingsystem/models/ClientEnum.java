@@ -25,19 +25,16 @@ public enum ClientEnum {
 
     public abstract double discountCalculator(double value);
 
-    public String getAllTypes(){
-        for (ClientEnum enumeration: values()) {
-            return enumeration.getTYPE_CLIENT();
+    public ClientEnum clientEnumType(String typeEnum){
+        for(ClientEnum type: values()){
+            if (type.getTYPE_CLIENT().equals(typeEnum)){
+                return type;
+            }
         }
         return null;
     }
 
-    public int getAllValues(){
-        for (ClientEnum enumeration: values()) {
-            return enumeration.getVALUE();
-        }
-        return 0;
-    }
+
 
     public int getVALUE(){
         return this.VALUE;

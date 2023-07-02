@@ -5,6 +5,8 @@ import java.util.Objects;
 public class ClientModel extends UserModel {
         ClientEnum clientEnum;
 
+
+
     public ClientModel(String firstName, String lastName, String email, String password, String phoneNumber, Integer age, ClientEnum clientEnum) {
         super(firstName, lastName, email, password, phoneNumber, age);
         this.clientEnum = clientEnum;
@@ -43,9 +45,8 @@ public class ClientModel extends UserModel {
 
     @Override
     public String toString() {
-        return (super.toString() + "ClientModel{" +
-                "clientEnum=" + clientEnum +
-                '}');
+        return (super.toString() + " ClientModel {" +
+                "clientEnum = " + clientEnum.getVALUE() +" "+ clientEnum.getTYPE_CLIENT() +'}');
 
 
 

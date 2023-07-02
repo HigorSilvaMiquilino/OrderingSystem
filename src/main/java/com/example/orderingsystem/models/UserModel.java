@@ -34,6 +34,10 @@ public abstract class UserModel {
         this.age = age;
     }
 
+    public UserModel() {
+
+    }
+
     public Integer getId() {
         return id;
     }

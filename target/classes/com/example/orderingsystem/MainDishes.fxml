@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+<BorderPane fx:id="borderPaneMainDishes"
+            xmlns="http://javafx.com/javafx/11.0.2"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.orderingsystem.form.MainDishesController"
+            prefHeight="750" prefWidth="1360">
+
+
+    <left>
+        <VBox fx:id="vBoxMainDishes" style="-fx-background-color: #DC143C;" spacing="10" prefWidth="350"
+              alignment="TOP_CENTER">
+            <padding>
+                <Insets  top="65"/>
+            </padding>
+            <Label text="Ordering App" fx:id="orderingAppLabel"  textFill="azure"
+                   prefHeight="110" prefWidth="230">
+                <VBox.margin>
+                    <Insets top="10" right="10" bottom="10" left="10" />
+                </VBox.margin>
+                <font>
+                    <Font name="SansSerif Regular" size="38"/>
+                </font>
+            </Label>
+            <Label text="Food" fx:id="foodLabel" onMouseClicked="#foodClicked" textFill="azure"
+                   prefHeight="55" prefWidth="135" graphicTextGap="5" underline="true">
+                <VBox.margin>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </VBox.margin>
+
+                <graphic>
+                    <ImageView fx:id="imageFood" fitWidth="28" fitHeight="28" preserveRatio="true"
+                               cache="true" onKeyTyped="#imageFoodClicked" >
+                        <Image url="@images/food.png" />
+                    </ImageView>
+                </graphic>
+
+                <font>
+                    <Font name="SansSerif Regular" size="20"/>
+                </font>
+
+            </Label>
+            <Label text="Drinks" fx:id="drinksLabel"  onMouseClicked="#drinksClicked" textFill="azure"
+                   prefHeight="55" prefWidth="135" graphicTextGap="5" underline="true">
+                <VBox.margin>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </VBox.margin>
+
+                <graphic>
+                    <ImageView fx:id="imageDrinks" fitWidth="28" fitHeight="28" preserveRatio="true"
+                               cache="true" onKeyTyped="#imageDrinkClicked">
+                        <Image url="@images/cocktail.png" />
+                    </ImageView>
+                </graphic>
+
+                <font>
+                    <Font name="SansSerif Regular" size="20"/>
+                </font>
+
+            </Label>
+            <Label text="Desserts" fx:id="dessertsLabel" onMouseClicked="#dessertsClicked" textFill="azure"
+                   prefHeight="55" prefWidth="135" graphicTextGap="6" underline="true">
+                <VBox.margin>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </VBox.margin>
+
+                <graphic>
+                    <ImageView fx:id="imageDesserts" fitWidth="25" fitHeight="25" preserveRatio="true"
+                               cache="true" onKeyTyped="#imageDessertsClicked">
+                        <Image url="@images/cake-slice.png" />
+                    </ImageView>
+                </graphic>
+
+                <font>
+                    <Font name="SansSerif Regular" size="20"/>
+                </font>
+
+            </Label>
+
+            <Label text="Ordering" fx:id="orderingLabel" onMouseClicked="#orderingClicked" textFill="azure"
+                   prefHeight="55" prefWidth="135" graphicTextGap="6" underline="true">
+                <VBox.margin>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </VBox.margin>
+
+                <graphic>
+                    <ImageView fx:id="imageOrdering" fitWidth="25" fitHeight="25" preserveRatio="true"
+                               cache="true" onKeyTyped="#imageOrderingClicked">
+                        <Image url="@images/trolley.png" />
+                    </ImageView>
+                </graphic>
+
+                <font>
+                    <Font name="SansSerif Regular" size="20"/>
+                </font>
+
+            </Label>
+
+            <Label text="User" fx:id="userLabel" onMouseClicked="#userClicked" textFill="azure"
+                   prefHeight="55" prefWidth="135" graphicTextGap="6" underline="true">
+                <VBox.margin>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </VBox.margin>
+
+                <graphic>
+                    <ImageView fx:id="imageUser" fitWidth="25" fitHeight="25" preserveRatio="true"
+                               cache="true" onKeyTyped="#imageUserClicked">
+                        <Image url="@images/man.png" />
+                    </ImageView>
+                </graphic>
+
+                <font>
+                    <Font name="SansSerif Regular" size="20"/>
+                </font>
+
+            </Label>
+
+            <Label text="About" fx:id="aboutLabel" onMouseClicked="#aboutClicked" textFill="azure"
+                   prefHeight="55" prefWidth="135" graphicTextGap="6" underline="true">
+                <VBox.margin>
+                    <Insets top="10" right="10" bottom="10" left="10"/>
+                </VBox.margin>
+
+                <graphic>
+                    <ImageView fx:id="imageAbout" fitWidth="25" fitHeight="25" preserveRatio="true"
+                               cache="true" onKeyTyped="#imageAboutClicked">
+                        <Image url="@images/information-button.png" />
+                    </ImageView>
+                </graphic>
+
+                <font>
+                    <Font name="SansSerif Regular" size="20"/>
+                </font>
+
+            </Label>
+        </VBox>
+    </left>
+</BorderPane>
+
+
+
