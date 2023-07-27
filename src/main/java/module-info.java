@@ -19,8 +19,8 @@ module com.example.orderingsystem {
 
     opens com.example.orderingsystem to javafx.fxml;
     exports com.example.orderingsystem;
-    exports com.example.orderingsystem.form;
-    opens com.example.orderingsystem.form to javafx.fxml;
+    exports com.example.orderingsystem.controller;
+    opens com.example.orderingsystem.controller to javafx.fxml;
 
 
 }

@@ -16,8 +16,8 @@ public class HelloApplication extends Application {
         scene.getStylesheets().add(Objects.requireNonNull(
                 getClass().getResource("stylesheet/login.css")
         ).toExternalForm());
-        stage.setTitle("Hello!");
         stage.setMaximized(true);
+        stage.setTitle("Hello!");
         stage.setScene(scene);
         stage.show();
 
