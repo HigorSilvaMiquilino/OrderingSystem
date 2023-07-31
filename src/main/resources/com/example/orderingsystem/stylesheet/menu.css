@@ -2,6 +2,30 @@
       -fx-background-color: gray;
       -fx-border-color: black;
       -fx-border-width: 2;
-      -fx-border-radius: 5;"
+      -fx-border-radius: 5;
 }
 
+.cardBtn{
+    -fx-background-color: linear-gradient(to bottom right, #00FF1A, #39AE45);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-background-radius:  10px;
+}
+
+.cardBtn:hover{
+    -fx-background-color: linear-gradient(to bottom right, #00FF1A, #49FF5B);
+}
+
+.spinner{
+    -fx-border-color: #CCCCCC;
+    -fx-border-width: 1px;
+    -fx-background-color: #FFFFFF;
+}
+
+.spinner .increment-button, .spinner .decrement-button{
+    -fx-font-size: 12px;
+    -fx-padding: 3px 5px;
+    -fx-background-color: #F5F5F5;
+    -fx-text-fill: #333333;
+}

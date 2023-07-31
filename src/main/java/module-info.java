@@ -15,12 +15,14 @@ module com.example.orderingsystem {
     requires java.sql;
     requires java.sql.rowset;
     requires java.transaction.xa;
+    requires kernel;
+    requires layout;
+    requires io;
+    requires org.slf4j;
+    requires com.github.librepdf.openpdf;
 
-
-    opens com.example.orderingsystem to javafx.fxml;
-    exports com.example.orderingsystem;
-    exports com.example.orderingsystem.controller;
     opens com.example.orderingsystem.controller to javafx.fxml;
+    exports com.example.orderingsystem;
 
 
 }

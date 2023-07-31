@@ -3,6 +3,7 @@ package com.example.orderingsystem.controller;
 import com.example.orderingsystem.models.ClientEnum;
 import com.example.orderingsystem.models.ClientModel;
 import com.example.orderingsystem.orderingdatabase.service.ClientService;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -17,6 +18,7 @@ import java.util.ResourceBundle;
 
 public class RegisterController implements Initializable {
 
+    public Button returnBtn;
     @FXML
     GridPane gridPaneRegister;
     @FXML
@@ -174,5 +176,7 @@ public class RegisterController implements Initializable {
         return false;
     }
 
-
+    public void returnButtonPressed(ActionEvent event) throws IOException {
+        new SceneSwitch(gridPaneRegister, "/com/example/orderingsystem/login.fxml");
+    }
 }

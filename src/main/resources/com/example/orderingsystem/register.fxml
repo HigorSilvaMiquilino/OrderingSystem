@@ -35,7 +35,7 @@
     <Label fx:id="errorLastNameLabel" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
 
     <Label text="Email:" fx:id="emailLabel" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-    <TextField promptText="userModel@gmail.com" fx:id="emailTextField" prefWidth="300"
+    <TextField promptText="username@gmail.com" fx:id="emailTextField" prefWidth="300"
                GridPane.columnIndex="1" GridPane.rowIndex="2"/>
     <Label fx:id="errorEmailLabel" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
 
@@ -58,8 +58,11 @@
     <ChoiceBox fx:id="typeClientEnum" prefWidth="175" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
     <Label fx:id="errorTypeLabel" GridPane.columnIndex="2" GridPane.rowIndex="6"/>
 
-    <Button text="Register:" prefWidth="300" onAction="#registerButtonPressed"
+    <Button text="Register" prefWidth="300" onAction="#registerButtonPressed"
             GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+
+    <Button text="Return" prefWidth="150" onAction="#returnButtonPressed" fx:id="returnBtn"
+            GridPane.columnIndex="1" GridPane.rowIndex="8"  GridPane.halignment="RIGHT"/>
 </GridPane>
 
 

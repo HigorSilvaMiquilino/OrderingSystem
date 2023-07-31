@@ -1,6 +1,7 @@
 package com.example.orderingsystem.controller;
 
 import com.example.orderingsystem.CustomersData;
+import com.example.orderingsystem.HelloApplication;
 import com.example.orderingsystem.ProductData;
 import com.example.orderingsystem.data;
 import com.example.orderingsystem.orderingdatabase.conn.ConnectionFactory;
@@ -10,6 +11,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.geometry.Insets;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
@@ -17,6 +21,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.*;
 import javafx.stage.FileChooser;
+import javafx.stage.Stage;
 
 import java.io.File;
 import java.io.IOException;
@@ -29,6 +34,10 @@ public class MainDishesController implements Initializable {
     public Label customerLabel;
     @FXML
     public ImageView imageCustomer;
+    @FXML
+    public Label logoutLabel;
+    @FXML
+    public ImageView imageLogout;
     @FXML
     private Label InventoryLabel;
 
@@ -666,6 +675,13 @@ public class MainDishesController implements Initializable {
 
     }
 
+    public void printReceipt() {
+        ObservableList<ProductData> orderData = menuGetOrder();
+
+        ReceiptWriter receiptWriter = new ReceiptWriter();
+        receiptWriter.writeReceiptToPDF(orderData, totalP,change);
+    }
+
     private int cID;
 
     public void customerId() {
@@ -708,7 +724,7 @@ public class MainDishesController implements Initializable {
         }
     }
 
-    private double totalP;
+    public double totalP;
 
     public void menuGetTotal() {
         customerId();
@@ -799,6 +815,7 @@ public class MainDishesController implements Initializable {
                     Optional<ButtonType> optional = alert.showAndWait();
 
                     if (optional.get().equals(ButtonType.OK)) {
+                        printReceipt();
                         customerId();
                         menuGetTotal();
                         prepare = connection.prepareStatement(insertPay);
@@ -816,6 +833,7 @@ public class MainDishesController implements Initializable {
                         alert.setHeaderText(null);
                         alert.setContentText("Successful.");
                         alert.showAndWait();
+
 
                         menuShowOrderData();
                         menuRestart();
@@ -939,5 +957,47 @@ public class MainDishesController implements Initializable {
 
     }
 
+
+
     //------------------------------------------------------------------------------------------------------------------
+
+
+    public void logoutClicked(MouseEvent mouseEvent) {
+        try {
+            alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Error Message");
+            alert.setHeaderText("I want to make sure what it does");
+            alert.setContentText("Are you sure you want to logout?");
+            Optional<ButtonType> optional = alert.showAndWait();
+
+            FXMLLoader load = new FXMLLoader();
+            load.setLocation(getClass().getResource("/com/example/orderingsystem/login.fxml"));
+            GridPane pane = load.load();
+            LoginController loginController = load.getController();
+
+            if (optional.get().equals(ButtonType.OK)) {
+                Parent fxml = FXMLLoader.load(Objects.requireNonNull(HelloApplication.class.getResource("login.fxml")));
+                borderPaneMainDishes.getChildren().removeAll();
+                loginController.gridPaneLogin.getChildren().setAll(fxml);
+
+                Stage stage = (Stage) ((Node) mouseEvent.getSource()).getScene().getWindow();
+                Scene scene = new Scene(pane);
+
+                scene.getStylesheets().add(Objects.requireNonNull(
+                        HelloApplication.class.getResource("stylesheet/login.css")
+                ).toExternalForm());
+
+                stage.setMaximized(true);
+                stage.setTitle("Hello!");
+                stage.setScene(scene);
+                stage.show();
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+    }
+
+
 }

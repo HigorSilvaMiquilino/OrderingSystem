@@ -1,6 +1,7 @@
 #menuLabel:hover,
 #InventoryLabel:hover,
-#customerLabel:hover{
+#customerLabel:hover,
+#logoutLabel:hover{
         -fx-background-color: #FFF;
         -fx-background-radius: 0px;
         -fx-border-color: #0000FF;
@@ -8,6 +9,7 @@
         -fx-border-style: solid;
         -fx-text-fill: #000;
 }
+
 
 .shadow{
     -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 5,0,0,0);
@@ -53,10 +55,72 @@
     -fx-cursor: hand;
     -fx-text-fill: #fff;
     -fx-font-size: 14px;
+    -fx-background-radius:  8px;
 }
 
 .btn:hover{
-    -fx-background-color: linear-gradient(to bottom right, #0f6789, #286155);
+    -fx-background-color: linear-gradient(to bottom right, #0f6789, #46FF84);
 }
+
+.updateBtn{
+    -fx-background-color: linear-gradient(to bottom right, #FFD500, #A68B00);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-background-radius:  8px;
+}
+
+.updateBtn:hover{
+    -fx-background-color: linear-gradient(to bottom right, #FFD500, #C6D44E);
+}
+
+.deleteBtn{
+    -fx-background-color: linear-gradient(to bottom right, #FF0000, #662222);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-background-radius:  8px;
+}
+
+.deleteBtn:hover{
+    -fx-background-color: linear-gradient(to bottom right, #FF0000, #FF9090);
+}
+
+.clearBtn{
+    -fx-background-color: linear-gradient(to bottom right, #6600FF, #342F81);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-background-radius:  8px;
+}
+
+.clearBtn:hover{
+    -fx-background-color: linear-gradient(to bottom right, #6600FF, #BA97FF);
+}
+
+.importBtn{
+    -fx-background-color: linear-gradient(to bottom right, #0044FF, #2F5381);
+    -fx-cursor: hand;
+    -fx-text-fill: #fff;
+    -fx-font-size: 14px;
+    -fx-background-radius:  8px;
+}
+
+.importBtn:hover{
+    -fx-background-color: linear-gradient(to bottom right, #0044FF, #5E89FF);
+}
+
+.logout{
+    -fx-background-color: #106abf;
+    -fx-padding: 5px;
+    -fx-cursor: hand;
+    -fx-background-radius: 50px;
+}
+
+.logout:hover{
+    -fx-background-color: #a71931;
+}
+
+
 
 

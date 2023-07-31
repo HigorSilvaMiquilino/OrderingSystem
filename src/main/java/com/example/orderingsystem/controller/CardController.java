@@ -145,7 +145,7 @@ public class CardController implements Initializable {
                     alert.setContentText("Invalid. This product is out of stock!");
                     alert.showAndWait();
                 }else {
-//                    prod_image = prod_image.replace("\\", "\\");
+                    prod_image = prod_image.replace("\\\\", "\\");
 
                     String insertData = "INSERT INTO customer " +
                             " (customer_id,prod_id, prod_name, type, quantity,price,date,image,em_username) " +

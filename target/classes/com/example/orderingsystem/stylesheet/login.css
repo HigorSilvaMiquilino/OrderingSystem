@@ -16,4 +16,9 @@
   -fx-background-radius: 12px
 }
 
+.returnBtn{
+  -fx-border-width: 6;
+  -fx-background-radius: 6px
+}
+
 
